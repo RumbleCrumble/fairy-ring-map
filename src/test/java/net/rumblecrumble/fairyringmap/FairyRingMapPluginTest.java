@@ -1,13 +1,13 @@
-package com.example;
+package net.rumblecrumble.fairyringmap;
 
 import net.runelite.client.RuneLite;
 import net.runelite.client.externalplugins.ExternalPluginManager;
 
-public class ExamplePluginTest
+public class FairyRingMapPluginTest
 {
 	public static void main(String[] args) throws Exception
 	{
-		ExternalPluginManager.loadBuiltin(ExamplePlugin.class);
+		ExternalPluginManager.loadBuiltin(FairyRingMapPlugin.class);
 		RuneLite.main(args);
 	}
 }

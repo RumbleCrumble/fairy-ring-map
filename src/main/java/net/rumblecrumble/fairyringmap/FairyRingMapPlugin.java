@@ -1,4 +1,4 @@
-package com.example;
+package net.rumblecrumble.fairyringmap;
 
 import com.google.inject.Provides;
 import javax.inject.Inject;
@@ -14,31 +14,27 @@ import net.runelite.client.plugins.PluginDescriptor;
 
 @Slf4j
 @PluginDescriptor(
-	name = "Example"
+	name = "Fairy Ring Map"
 )
-public class ExamplePlugin extends Plugin
-{
+public class FairyRingMapPlugin extends Plugin {
 	@Inject
 	private Client client;
 
 	@Inject
-	private ExampleConfig config;
+	private FairyRingMapConfig config;
 
 	@Override
-	protected void startUp() throws Exception
-	{
+	protected void startUp() throws Exception {
 		log.info("Example started!");
 	}
 
 	@Override
-	protected void shutDown() throws Exception
-	{
+	protected void shutDown() throws Exception {
 		log.info("Example stopped!");
 	}
 
 	@Subscribe
-	public void onGameStateChanged(GameStateChanged gameStateChanged)
-	{
+	public void onGameStateChanged(GameStateChanged gameStateChanged) {
 		if (gameStateChanged.getGameState() == GameState.LOGGED_IN)
 		{
 			client.addChatMessage(ChatMessageType.GAMEMESSAGE, "", "Example says " + config.greeting(), null);
@@ -46,8 +42,7 @@ public class ExamplePlugin extends Plugin
 	}
 
 	@Provides
-	ExampleConfig provideConfig(ConfigManager configManager)
-	{
-		return configManager.getConfig(ExampleConfig.class);
+	FairyRingMapConfig provideConfig(ConfigManager configManager) {
+		return configManager.getConfig(FairyRingMapConfig.class);
 	}
 }

@@ -1,2 +1,2 @@
-# Example
-An example greeter plugin
+# Fairy Ring Map
+Uses the Trailblazer League Map to add a more streamlined and visual Fairy Ring Map so users won't have to search on the map for the fairy ring they want to teleport to then go into the Fairy Ring teleport menu and enter the code in.
